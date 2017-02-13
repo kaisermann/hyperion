@@ -1,12 +1,12 @@
 {
-  "name": "crius",
+  "name": "hyperion",
   "version": "1.0.0-alpha.1",
   "author": "Christian Kaisermann <christian@kaisermann.me>",
-  "homepage": "https://github.com/kaisermann/crius",
+  "homepage": "https://github.com/kaisermann/hyperion",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com:kaisermann/crius.git"
+    "url": "git@github.com:kaisermann/hyperion.git"
   },
   "license": "(MIT)",
   "scripts": {},
@@ -41,9 +41,11 @@
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^3.0.1",
     "gulp-flatten": "^0.3.1",
+    "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.1",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-nunjucks-render": "^2.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.3.0",
     "gulp-print": "^2.0.1",

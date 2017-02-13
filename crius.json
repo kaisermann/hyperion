@@ -1,7 +1,7 @@
 {
   "config": {
     "paths": {
-      "source": "assets/",
+      "source": "app/",
       "dist": "dist/"
     },
     "supportedBrowsers": ["last 2 versions", "opera 12", "IE 11", "Safari >= 8"],
@@ -15,26 +15,35 @@
     "devUrl": "localhost/web/root"
   },
   "resources": {
+    "html": {
+      "pattern": "*.{html,nunjucks}",
+      "directory": "",
+      "assets": {
+        "./": {
+          "files": "*.{html,nunjucks}"
+        }
+      }
+    },
     "scripts": {
       "pattern": "*.js",
-      "directory": "scripts",
+      "directory": "assets/scripts",
       "assets": {
         "main.js": {
-          "files": "scripts/wrapper.js",
-          "vendor": "assets/scripts/vendor/*.js",
+          "files": "assets/scripts/wrapper.js",
+          "vendor": "app/assets/scripts/vendor/*.js",
           "npm": []
         }
       }
     },
     "styles": {
       "pattern": "*.{css,styl,scss,sass,less}",
-      "directory": "styles",
+      "directory": "assets/styles",
       "assets": {
         "main.css": {
-          "files": "styles/wrapper.styl",
+          "files": "assets/styles/wrapper.styl",
           "vendor": [
-            "assets/styles/vendor/reset.css",
-            "assets/styles/vendor/*.css"
+            "app/assets/styles/vendor/reset.css",
+            "app/assets/styles/vendor/*.css"
           ],
           "npm": [],
           "uncss": true
@@ -43,19 +52,19 @@
     },
     "fonts": {
       "pattern": "*.{eot,otf,svg,ttc,ttf,woff,woff2}",
-      "directory": "fonts",
+      "directory": "assets/fonts",
       "assets": {
         "./": {
-          "files": "fonts/**/*"
+          "files": "assets/fonts/**/*"
         }
       }
     },
     "images": {
       "pattern": "*.{jpg,png,gif,svg}",
-      "directory": "images",
+      "directory": "assets/images",
       "assets": {
         "./": {
-          "files": "images/**/*"
+          "files": "assets/images/**/*"
         }
       }
     }
