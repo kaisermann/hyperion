@@ -9,8 +9,8 @@ module.exports = {
   pipelines: {
     each: asset => {
       return lazypipe()
-        .pipe(() => gulpIf('*.nunjucks', nunjucksRender({
-          path: './app',
+        .pipe(() => gulpIf('*.njk', nunjucksRender({
+          path: crius.config.paths.source,
         })))
         .pipe(() => gulpIf(file => !crius.params.debug && file.path.split('.').pop() === 'html',
           htmlmin({

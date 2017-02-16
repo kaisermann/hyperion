@@ -15,11 +15,11 @@
   },
   "resources": {
     "html": {
-      "pattern": "*.{html,nunjucks}",
+      "pattern": "*.{html,njk,nunjucks}",
       "directory": "",
       "assets": {
         "./": {
-          "files": "*.{html,nunjucks}"
+          "files": "*.{html,njk,nunjucks}"
         }
       }
     },
