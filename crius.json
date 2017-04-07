@@ -7,7 +7,7 @@
     "browserSync": {
       "mode": "server",
       "watch": [
-        "{src,templates}/**/*.{php,html}",
+        "{src,templates,views}/**/*.{php,html}",
         "*.{php,html}"
       ],
       "devUrl": "localhost/web/root"
@@ -29,8 +29,7 @@
       "assets": {
         "main.js": {
           "files": "assets/scripts/wrapper.js",
-          "vendor": "app/assets/scripts/vendor/*.js",
-          "npm": []
+          "vendor": "app/assets/scripts/vendor/*.js"
         }
       }
     },
@@ -40,11 +39,7 @@
       "assets": {
         "main.css": {
           "files": "assets/styles/wrapper.styl",
-          "vendor": [
-            "app/assets/styles/vendor/reset.css",
-            "app/assets/styles/vendor/*.css"
-          ],
-          "npm": [],
+          "vendor": "app/assets/styles/vendor/*.css",
           "uncss": true
         }
       }
