@@ -7,30 +7,25 @@
     "browserSync": {
       "mode": "server",
       "watch": [
-        "{src,templates,views}/**/*.{php,html}",
-        "*.{php,html}"
+        "app/**/*.{njk,html,nunjucks}",
+        "*.{njk,html,nunjucks}"
       ],
       "devUrl": "localhost/web/root"
     }
   },
   "resources": {
     "html": {
-      "pattern": "*.{html,njk,nunjucks}",
+      "pattern": "*.{njk,html,nunjucks}",
       "directory": "",
       "assets": {
-        "./": {
-          "files": "*.{html,njk,nunjucks}"
-        }
+        "./": "*.{njk,html,nunjucks}"
       }
     },
     "scripts": {
       "pattern": "*.js",
       "directory": "assets/scripts",
       "assets": {
-        "main.js": {
-          "files": "assets/scripts/wrapper.js",
-          "vendor": "app/assets/scripts/vendor/*.js"
-        }
+        "main.js": "assets/scripts/wrapper.js"
       }
     },
     "styles": {
@@ -39,7 +34,6 @@
       "assets": {
         "main.css": {
           "files": "assets/styles/wrapper.styl",
-          "vendor": "app/assets/styles/vendor/*.css",
           "uncss": true
         }
       }
