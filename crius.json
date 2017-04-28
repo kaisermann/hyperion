@@ -42,14 +42,14 @@
       "pattern": "*.{eot,otf,svg,ttc,ttf,woff,woff2}",
       "directory": "assets/fonts",
       "assets": {
-        "./": "fonts/**/*"
+        "./": "assets/fonts/**/*"
       }
     },
     "images": {
       "pattern": "*.{jpg,png,gif,svg}",
       "directory": "assets/images",
       "assets": {
-        "./": "images/**/*"
+        "./": "assets/images/**/*"
       }
     }
   }
