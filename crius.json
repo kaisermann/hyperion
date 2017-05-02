@@ -6,10 +6,7 @@
     },
     "browserSync": {
       "mode": "server",
-      "watch": [
-        "app/**/*.{njk,html,nunjucks}",
-        "*.{njk,html,nunjucks}"
-      ],
+      "watch": [],
       "devUrl": "localhost/web/root"
     }
   },
