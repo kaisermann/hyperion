@@ -6,7 +6,7 @@
     },
     "browserSync": {
       "mode": "server",
-      "baseDir": "./build",
+      "baseDir": "build",
       "index": "index.html",
       "watch": []
     }
