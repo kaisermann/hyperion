@@ -9,7 +9,11 @@
     "url": "git@github.com:kaisermann/hyperion.git"
   },
   "license": "(MIT)",
-  "scripts": {},
+  "scripts": {
+    "build-dev": "export NODE_ENV='staging'; gulp -p",
+    "build-staging": "export NODE_ENV='staging'; gulp -p",
+    "build-production": "export NODE_ENV='production'; gulp -p"
+  },
   "engines": {
     "node": ">= 6.9.4"
   },
