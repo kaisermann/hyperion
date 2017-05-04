@@ -1,0 +1,11 @@
+{
+  "title": "Hyperion",
+  "environments": {
+    "dev": {
+      "title": "Hyperion DEV"
+    },
+    "production": {
+      "title": "Hyperion PRODUCTION"
+    }
+  }
+}

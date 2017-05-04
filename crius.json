@@ -2,12 +2,13 @@
   "config": {
     "paths": {
       "source": "app/",
-      "dist": "dist/"
+      "dist": "build/"
     },
     "browserSync": {
       "mode": "server",
-      "watch": [],
-      "devUrl": "localhost/web/root"
+      "baseDir": "./build",
+      "index": "index.html",
+      "watch": []
     }
   },
   "resources": {
