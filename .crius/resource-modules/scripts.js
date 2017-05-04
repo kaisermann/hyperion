@@ -4,7 +4,6 @@ const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 const sourcemaps = require('gulp-sourcemaps')
 const betterRollup = require('gulp-better-rollup')
-const rev = require('gulp-rev')
 
 // const rollUpBabel = require('rollup-plugin-babel')
 const rollUpBuble = require('rollup-plugin-buble')
@@ -13,7 +12,6 @@ const rollUpNodeResolve = require('rollup-plugin-node-resolve')
 const rollUpNodebuiltins = require('rollup-plugin-node-builtins')
 
 const crius = require('../manifest')
-const writeToManifest = require('../utils/writeToManifest')
 
 // Caches the project's globs
 const projectGlobs = crius.getProjectGlobs()
@@ -61,8 +59,6 @@ module.exports = {
         .pipe(() => gulpIf(crius.params.maps, sourcemaps.write('.', {
           sourceRoot: crius.config.paths.fromDistToSource,
         })))
-        .pipe(() => gulpIf(crius.params.production, rev()))
     },
-    merged: writeToManifest,
   },
 }

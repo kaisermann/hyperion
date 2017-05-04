@@ -4,14 +4,12 @@ const concat = require('gulp-concat')
 const postcss = require('gulp-postcss')
 const sourcemaps = require('gulp-sourcemaps')
 const stylus = require('gulp-stylus')
-const rev = require('gulp-rev')
 
 const postCSSautoprefixer = require('autoprefixer')
 const postCSSmqpacker = require('css-mqpacker')
 const postCSSnano = require('cssnano')
 
 const crius = require('../manifest')
-const writeToManifest = require('../utils/writeToManifest')
 
 module.exports = {
   pipelines: {
@@ -39,8 +37,6 @@ module.exports = {
       .pipe(() => gulpIf(crius.params.maps, sourcemaps.write('.', {
         sourceRoot: crius.config.paths.fromDistToSource,
       })))
-      .pipe(() => gulpIf(crius.params.production, rev()))
     },
-    merged: writeToManifest,
   },
 }
