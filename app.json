@@ -4,6 +4,9 @@
     "dev": {
       "title": "Hyperion DEV"
     },
+    "staging": {
+      "title": "Hyperion STAGING"
+    },
     "production": {
       "title": "Hyperion PRODUCTION"
     }
