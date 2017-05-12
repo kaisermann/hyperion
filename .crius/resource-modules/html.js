@@ -16,12 +16,18 @@ module.exports = {
             nunjucksRender({
               path: crius.config.paths.source,
               manageEnv: function (environment) {
-                const filters = hyperion.getFilters()
+                const filters = hyperion.filters()
+                const methods = hyperion.methods()
+
                 Object.keys(filters).forEach(key =>
                   environment.addFilter(key, filters[key])
                 )
+
+                Object.keys(methods).forEach(key =>
+                  environment.addGlobal(key, methods[key])
+                )
               },
-              data: hyperion.getData(),
+              data: hyperion.data(),
             })
           )
         )

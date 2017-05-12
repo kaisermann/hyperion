@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    {% include "partials/head.html" %}
-  </head>
+  <head>{% include "partials/head.njk" %}</head>
   <body>
-    {% include "partials/header.html" %}
+    {% include "partials/header.njk" %}
     {% block content %}{% endblock %}
-    {% include "partials/footer.html" %}
-    <script type="text/javascript" src="assets/scripts/main.js"></script>
+    {% include "partials/footer.njk" %}
+    <script type="text/javascript" src="{{ asset('scripts/main.js') }}"></script>
   </body>
 </html>
