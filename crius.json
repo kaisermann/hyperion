@@ -13,7 +13,7 @@
   },
   "resources": {
     "html": {
-      "watch": ["app.json", "hyperion.js"],
+      "watch": ["app.json", "./.hyperion/*.js"],
       "pattern": "*.{njk,html,nunjucks}",
       "directory": "",
       "assets": {

@@ -4,7 +4,10 @@ const nunjucksRender = require('gulp-nunjucks-render')
 const htmlmin = require('gulp-htmlmin')
 
 const crius = require('../manifest.js')
-const hyperion = require('../../hyperion.js')
+
+const hyperionFilters = require('../../.hyperion/filters.js')
+const hyperionMethods = require('../../.hyperion/methods.js')
+const hyperionGetData = require('../../.hyperion/data.js')
 
 module.exports = {
   pipelines: {
@@ -16,18 +19,15 @@ module.exports = {
             nunjucksRender({
               path: crius.config.paths.source,
               manageEnv: function (environment) {
-                const filters = hyperion.filters()
-                const methods = hyperion.methods()
-
-                Object.keys(filters).forEach(key =>
-                  environment.addFilter(key, filters[key])
+                Object.keys(hyperionFilters).forEach(key =>
+                  environment.addFilter(key, hyperionFilters[key])
                 )
 
-                Object.keys(methods).forEach(key =>
-                  environment.addGlobal(key, methods[key])
+                Object.keys(hyperionMethods).forEach(key =>
+                  environment.addGlobal(key, hyperionMethods[key])
                 )
               },
-              data: hyperion.data(),
+              data: hyperionGetData(),
             })
           )
         )
