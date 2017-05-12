@@ -1,5 +1,9 @@
 {
   "title": "Hyperion",
+  "urls": {
+    "main": "http://localhost:3000",
+    "assets": "{{ urls.main }}/assets"
+  },
   "environments": {
     "dev": {
       "title": "Hyperion DEV"
