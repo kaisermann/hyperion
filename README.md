@@ -8,12 +8,10 @@ With hyperion you can:
   * If a `NODE_ENV` is set, the script will look for a property inside [`environments`](https://github.com/kaisermann/hyperion/blob/master/app.json#L3) with the same name as the environment name to set the `app` object.
   * Create new Nunjucks context variables and filters by editing [`hyperion.js`](https://github.com/kaisermann/hyperion/blob/master/hyperion.js).
 * Write CSS with Stylus
-    * Build your website's grid with the RolleiFLEX declarative flex helper framework. (stylus)
+    * Build your website's grid with the RolleiFLEX flex helper framework. (stylus)
     * Use simplified media queries with rupture (stylus)
-* Write ES6 Javascript (with async/await support)
+* Write modern Javascript
 * See live changes (CSS/JS/HTML) on your project with [browserSync](https://www.browsersync.io/)
-* Have your [bower](https://bower.io/) or npm packages automatically included in your assets
-  * Check the [`crius.json`](https://github.com/kaisermann/hyperion/blob/master/crius.json) on the **root** directory
 * Need to manage a new type of resource, like, let's say... sounds? Just define it in the [`crius.json`](https://github.com/kaisermann/hyperion/blob/master/crius.json) and let the magic happen!
 
 ## Requirements
