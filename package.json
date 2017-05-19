@@ -10,6 +10,7 @@
   },
   "license": "(MIT)",
   "scripts": {
+    "watch": "gulp watch -d --sync --verbose --maps",
     "build": "export NODE_ENV='dev'; gulp -p",
     "build:staging": "export NODE_ENV='staging'; gulp -p",
     "build:production": "export NODE_ENV='production'; gulp -p"
