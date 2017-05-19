@@ -2738,9 +2738,9 @@ gulp-util@~2.2.0:
     through2 "^0.5.0"
     vinyl "^0.2.1"
 
-"gulp@git+ssh://git@github.com/gulpjs/gulp.git#4.0":
+"gulp@github:gulpjs/gulp#4.0":
   version "4.0.0-alpha.2"
-  resolved "git+ssh://git@github.com/gulpjs/gulp.git#38246c3f8b6dbb8d4ef657183e92d90c8299e22f"
+  resolved "https://codeload.github.com/gulpjs/gulp/tar.gz/38246c3f8b6dbb8d4ef657183e92d90c8299e22f"
   dependencies:
     glob-watcher "^3.0.0"
     gulp-cli "^1.0.0"
@@ -5028,17 +5028,17 @@ qs@6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.1.tgz#ce03c5ff0935bc1d9d69a9f14cbd18e568d67625"
 
-"qs@>= 0.4.0", qs@~6.3.0:
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.2.tgz#e75bd5f6e268122a2a0e0bda630b2550c166502c"
+"qs@>= 0.4.0", qs@~6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
 qs@~6.0.2:
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.0.4.tgz#51019d84720c939b82737e84556a782338ecea7b"
 
-qs@~6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
+qs@~6.3.0:
+  version "6.3.2"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.2.tgz#e75bd5f6e268122a2a0e0bda630b2550c166502c"
 
 query-string@^4.1.0:
   version "4.3.4"
