@@ -1,8 +1,8 @@
-dist
-build
-bower_components
-node_modules
-npm-debug.log
 .DS_Store
 ./index.html
+./sitemap.json
+dist
+build
+node_modules
+npm-debug.log
 yarn-error.log

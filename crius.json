@@ -24,7 +24,7 @@
       "pattern": "*.js",
       "directory": "assets/scripts",
       "assets": {
-        "main.js": "assets/scripts/wrapper.js"
+        "main.js": "wrapper.js"
       }
     },
     "styles": {
@@ -32,7 +32,8 @@
       "directory": "assets/styles",
       "assets": {
         "main.css": {
-          "files": "assets/styles/wrapper.styl",
+          "files": "wrapper.styl",
+          "vendor": "assets/styles/vendor/*.css",
           "uncss": true
         }
       }
@@ -41,14 +42,14 @@
       "pattern": "*.{eot,otf,svg,ttc,ttf,woff,woff2}",
       "directory": "assets/fonts",
       "assets": {
-        "./": "assets/fonts/**/*"
+        "./": "**/*"
       }
     },
     "images": {
       "pattern": "*.{jpg,png,gif,svg}",
       "directory": "assets/images",
       "assets": {
-        "./": "assets/images/**/*"
+        "./": "**/*"
       }
     }
   }
