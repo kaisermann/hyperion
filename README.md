@@ -10,6 +10,7 @@ With hyperion you can:
 * Write CSS with Stylus
     * Build your website's grid with the RolleiFLEX flex helper framework. (stylus)
     * Use simplified media queries with rupture (stylus)
+    * Responsive font-size and [other useful mixins](https://github.com/kaisermann/hyperion/blob/master/app/assets/styles/config/mixins.styl)
 * Write modern Javascript
 * See live changes (CSS/JS/HTML) on your project with [browserSync](https://www.browsersync.io/)
 * Need to manage a new type of resource, like, let's say... sounds? Just define it in the [`crius.json`](https://github.com/kaisermann/hyperion/blob/master/crius.json) and let the magic happen!
