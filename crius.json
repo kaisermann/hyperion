@@ -24,7 +24,7 @@
       "pattern": "*.js",
       "directory": "assets/scripts",
       "assets": {
-        "main.js": "wrapper.js"
+        "main.js": "index.js"
       }
     },
     "styles": {
@@ -32,7 +32,7 @@
       "directory": "assets/styles",
       "assets": {
         "main.css": {
-          "files": "wrapper.styl",
+          "files": "index.styl",
           "vendor": "assets/styles/vendor/*.css",
           "uncss": true
         }
