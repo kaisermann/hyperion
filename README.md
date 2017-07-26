@@ -1,6 +1,6 @@
 # Hyperion
 
-> A static webapp workflow forked from [Crius](https://github.com/kaisermann/crius).
+> A static website workflow forked from [Crius](https://github.com/kaisermann/crius).
 
 With hyperion you can:
 * Write HTML with [Nunjucks](https://mozilla.github.io/nunjucks/)
@@ -17,7 +17,7 @@ With hyperion you can:
 
 ## Requirements
 
-* [Node.js](http://nodejs.org/) >= 6.9.x
+* [Node.js](http://nodejs.org/) >= 7.x.x
 * [Gulp](https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/) >= 4.x.x
 
 ## External links
