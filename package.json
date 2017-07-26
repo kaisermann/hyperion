@@ -64,7 +64,7 @@
   },
   "scripts": {
     "watch": "gulp watch -d --sync --report --maps",
-    "build": "export NODE_ENV='dev'; gulp -d",
+    "build": "export NODE_ENV='development'; gulp -d",
     "build:staging": "export NODE_ENV='staging'; gulp",
     "build:production": "export NODE_ENV='production'; gulp -p"
   },

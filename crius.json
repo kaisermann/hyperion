@@ -13,12 +13,12 @@
   },
   "resources": {
     "html": {
-      "watch": ["app.json", "./.hyperion/*.js"],
       "pattern": "*.{njk,html,nunjucks}",
       "directory": "",
       "assets": {
         "./": "*.{njk,html,nunjucks}"
-      }
+      },
+      "watch": ["app.json", "./.hyperion/*.js"]
     },
     "scripts": {
       "pattern": "*.js",
