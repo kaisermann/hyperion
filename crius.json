@@ -24,7 +24,10 @@
       "pattern": "*.js",
       "directory": "assets/scripts",
       "assets": {
-        "main.js": "index.js"
+        "main.js": {
+          "files": "index.js",
+          "vendor": "resources/assets/scripts/vendor/*.js"
+        }
       }
     },
     "styles": {
@@ -33,7 +36,7 @@
       "assets": {
         "main.css": {
           "files": "index.styl",
-          "vendor": "assets/styles/vendor/*.css",
+          "vendor": "resources/assets/styles/vendor/*.css",
           "uncss": true
         }
       }
