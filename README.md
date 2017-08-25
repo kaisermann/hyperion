@@ -22,3 +22,4 @@ With hyperion you can:
 
 ## External links
 * [Crius documentation](https://github.com/kaisermann/crius) (recommended)
+* [Kaisermann.me repository - My portfolio website](https://github.com/kaisermann/kaisermann.me)
