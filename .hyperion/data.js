@@ -2,17 +2,20 @@ const { readFileSync } = require('fs')
 const deepExtend = require('deep-extend')
 
 const parseAppData = () => {
+  // Reads the 'app.json' file
+  let appData = JSON.parse(readFileSync('app.json', 'utf8'))
+
   /*
    * Reads a string like "{{prop1.prop2.prop3...}}" and returns the actual
    * value of 'object['prop1']['prop2']['prop3']...'
    */
-  const parsePropStr = str => {
+  const parsePropStr = (str, obj) => {
     let matched
 
     if (typeof str === 'string' && (matched = /{{\s?(\S*)\s?}}/g.exec(str))) {
       return str.replace(
         matched[0],
-        matched[1].split('.').reduce((o, i) => o[i], appData)
+        matched[1].split('.').reduce((o, i) => o[i], obj)
       )
     }
     return str
@@ -27,28 +30,25 @@ const parseAppData = () => {
       acc[key] =
         val.constructor === Object
           ? parseStringReferences(val)
-          : parsePropStr(val)
+          : parsePropStr(val, appData)
       return acc
     }, {})
-
-  // Reads the 'app.json' file
-  let appData = JSON.parse(readFileSync('app.json', 'utf8'))
 
   /*
    * If NODE_ENV is set and inside the 'app.json[environments]',
    * append its variables to the 'app' object.
    */
   appData = deepExtend(
+    {},
     appData,
-    appData.environments
+    appData.environments && appData.environments[process.env.NODE_ENV]
       ? appData.environments[process.env.NODE_ENV]
-        ? appData.environments[process.env.NODE_ENV]
-        : {}
       : {}
   )
   delete appData.environments
 
   appData = parseStringReferences(appData)
+  console.log(appData)
   return appData
 }
 

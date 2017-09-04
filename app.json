@@ -5,8 +5,8 @@
     "assets": "{{ urls.main }}/assets"
   },
   "environments": {
-    "dev": {
-      "title": "Hyperion DEV"
+    "development": {
+      "title": "Hyperion DEVELOPMENT",
     },
     "staging": {
       "title": "Hyperion STAGING"
