@@ -6,7 +6,7 @@
   },
   "environments": {
     "development": {
-      "title": "Hyperion DEVELOPMENT",
+      "title": "Hyperion DEVELOPMENT"
     },
     "staging": {
       "title": "Hyperion STAGING"

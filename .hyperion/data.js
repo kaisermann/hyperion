@@ -48,7 +48,6 @@ const parseAppData = () => {
   delete appData.environments
 
   appData = parseStringReferences(appData)
-  console.log(appData)
   return appData
 }
 
