@@ -8,10 +8,10 @@ size($width, $height = $width)
 	height: $height
 
 // rem(px [,base-font-size]), em(px [,base-font-size])
-rem($px, $base = app.baseFontSize)
+rem($px, $base = app.base.fontSize)
 	return unit($px / $base, 'rem')
 
-em($px, $base = app.baseFontSize)
+em($px, $base = app.base.fontSize)
 	return unit($px / $base, 'em')
 
 // Only unquote a string variable
@@ -100,9 +100,15 @@ responsive()
 		if !$match
 			// If the current object is null, we're still parsing the initial value
 			if !$currentObj
-				$initialValue = ($initialValue || unquote('')) $value
+				if($initialValue != null)
+					$initialValue = $initialValue $value
+				else
+					$initialValue = $value
 			else
-				$currentObj.value = ($currentObj.value || unquote('')) $value
+				if($currentObj.value != null)
+					$currentObj.value = $currentObj.value $value
+				else
+					$currentObj.value = $value
 		else
 			if $currentObj != null
 				push($breakpoints, $currentObj)
