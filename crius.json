@@ -36,8 +36,7 @@
       "assets": {
         "main.css": {
           "files": "index.styl",
-          "autoload": "resources/assets/styles/autoload/*.css",
-          "uncss": true
+          "autoload": "resources/assets/styles/autoload/*.css"
         }
       }
     },
