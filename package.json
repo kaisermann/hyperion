@@ -9,6 +9,21 @@
     "url": "git@github.com:kaisermann/hyperion.git"
   },
   "license": "(MIT)",
+  "engines": {
+    "node": ">= 6.9.4"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "opera 12",
+    "IE 11",
+    "Safari >= 8"
+  ],
+  "scripts": {
+    "watch": "gulp watch -d --sync --report --maps",
+    "build": "export NODE_ENV='development'; gulp -d",
+    "build:staging": "export NODE_ENV='staging'; gulp",
+    "build:production": "export NODE_ENV='production'; gulp -p"
+  },
   "eslintConfig": {
     "root": true,
     "extends": "standard",
@@ -76,21 +91,6 @@
       "declaration-block-trailing-semicolon": null
     }
   },
-  "scripts": {
-    "watch": "gulp watch -d --sync --report --maps",
-    "build": "export NODE_ENV='development'; gulp -d",
-    "build:staging": "export NODE_ENV='staging'; gulp",
-    "build:production": "export NODE_ENV='production'; gulp -p"
-  },
-  "engines": {
-    "node": ">= 6.9.4"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "opera 12",
-    "IE 11",
-    "Safari >= 8"
-  ],
   "devDependencies": {
     "autoprefixer": "^7.1.5",
     "browser-sync": "^2.18.13",
