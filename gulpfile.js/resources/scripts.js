@@ -45,7 +45,7 @@ if (crius.params.report) {
 
 module.exports = {
   tasks: {
-    before: ['eslint'],
+    before: ['lint:scripts'],
   },
   pipelines: {
     each: asset => {
