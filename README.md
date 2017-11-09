@@ -18,7 +18,7 @@ With hyperion you can:
 
 ## Requirements
 
-- [Node.js](http://nodejs.org/) >= 7.x.x
+- [Node.js](http://nodejs.org/) >= 8.6.0
 - [Gulp](https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/) >= 4.x.x
 
 ## External links
