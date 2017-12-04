@@ -1,4 +1,3 @@
-const { readFileSync } = require('fs')
 const { join } = require('path')
 
 const gulp = require('gulp')
@@ -23,21 +22,23 @@ gulp.task('purify', done => {
     throw new Error('Styles distribution directory not found.')
   }
 
-  const revManifestPath = join(distPath, crius.config.paths.manifest)
-  const revManifest = pathExists(revManifestPath)
-    ? JSON.parse(readFileSync(revManifestPath, 'utf-8'))
-    : {}
-
   // Let's get all assets with purify:true
   const cssPaths = Object.entries(crius.resources.styles.assets)
     .filter(([name, asset]) => asset.purify)
-    .map(([name, asset]) => join(stylesDir, revManifest[name] || name))
+    .map(([name, asset]) => join(stylesDir, name))
 
   const processDir = process.cwd()
   const globsToParse = [
     join(processDir, distPath, '**', '*.html'),
     join(processDir, distPath, '**', '*.js'),
   ]
+
+  if (!cssPaths.length) {
+    console.log(
+      "No css files found with 'purify': true. Define it on the 'crius.json'"
+    )
+    return done()
+  }
 
   return gulp
     .src(cssPaths, { base: './' })
