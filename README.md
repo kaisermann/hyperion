@@ -2,7 +2,7 @@
 
 > A static website workflow forked from [Crius](https://github.com/kaisermann/crius).
 
-With hyperion you can:
+With **hyperion** you can:
 
 * Write HTML with [Nunjucks](https://mozilla.github.io/nunjucks/)
   * Accessible variables within Nunjucks by using the [`app.json`](https://github.com/kaisermann/hyperion/blob/master/app.json) file. To reference a variable, use `app.variable.path...`.
