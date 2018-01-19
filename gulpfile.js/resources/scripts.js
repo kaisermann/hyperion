@@ -41,7 +41,7 @@ module.exports = {
       /** Write the sourcemaps */
       if (Flags.maps) {
         lazy = lazy.pipe(sourcemaps.write, '.', {
-          sourceRoot: Manifest.config.paths.distToRoot,
+          sourceRoot: Manifest.paths.distToRoot,
         })
       }
 

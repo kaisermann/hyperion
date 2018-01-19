@@ -29,7 +29,7 @@ module.exports = {
       let lazy = lazypipe()
 
       lazy = lazy.pipe(nunjucksRender, {
-        path: Manifest.config.paths.source,
+        path: Manifest.paths.source,
         manageEnv: environment => {
           Object.entries(hyperionFilters).forEach(entry =>
             environment.addFilter(...entry)

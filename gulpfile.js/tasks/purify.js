@@ -11,8 +11,6 @@ const errorHandler = require('../utils/errorHandler')
 const Manifest = require('../Manifest')
 const Flags = require('../Flags')
 
-const distPath = Manifest.config.paths.dist
-
 gulp.task('purify', done => {
   const stylesDir = Manifest.getDistDir('styles')
 
@@ -26,8 +24,8 @@ gulp.task('purify', done => {
     .map(([name, asset]) => join(stylesDir, name))
 
   const globsToParse = [
-    join(Manifest.config.paths.root, distPath, '**', '*.html'),
-    join(Manifest.config.paths.root, distPath, '**', '*.js'),
+    join(Manifest.paths.root, Manifest.paths.dist, '**', '*.html'),
+    join(Manifest.paths.root, Manifest.paths.dist, '**', '*.js'),
   ]
 
   if (!cssPaths.length) {

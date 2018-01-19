@@ -1,15 +1,13 @@
 {
-  "config": {
-    "paths": {
-      "source": "app/",
-      "dist": "build/"
-    },
-    "browserSync": {
-      "mode": "server",
-      "baseDir": "build",
-      "index": "index.html",
-      "watch": []
-    }
+  "paths": {
+    "source": "app/",
+    "dist": "build/"
+  },
+  "browserSync": {
+    "mode": "server",
+    "baseDir": "build",
+    "index": "index.html",
+    "watch": []
   },
   "resources": {
     "html": {
